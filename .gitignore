@@ -1,0 +1,17 @@
+.exe
+.pyc
+.idea/*
+.idea
+.terraform/*
+.terraform
+*terraform.tfstate*
+*terraform.tfstate.backup*
+.terraform/*
+terraform.tfstate
+*.terragrunt*
+*.terraform*
+*.log
+*.zip
+*.DS_Store
+versions_override.tf
+*temp/*

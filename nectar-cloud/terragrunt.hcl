@@ -35,7 +35,7 @@ remote_state {
   # disable_dependency_optimization = true
 
   config = {
-    path = local.env_vars.locals.path
+    path = "${get_path_to_repo_root()}/${local.env_vars.locals.stack}-state/terraform.tfstate"
   }
 }
 

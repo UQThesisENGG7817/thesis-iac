@@ -46,7 +46,7 @@ remote_state {
 locals {
   # -- File path
   env_path = fileexists("${get_parent_terragrunt_dir()}/envs/envs.hcl") ? "${get_parent_terragrunt_dir()}/envs/envs.hcl" : ""
-  # secret_path = fileexists("${get_parent_terragrunt_dir()}/secrets/secrets.hcl") ? "${get_parent_terragrunt_dir()}/secrets/secrets.hcl" : ""
+  secret_path = fileexists("${get_parent_terragrunt_dir()}/secrets/secrets.yaml") ? "${get_parent_terragrunt_dir()}/secrets/secrets.yaml" : ""
 
   # -- Automatically load env variables
   env_vars = read_terragrunt_config(local.env_path)

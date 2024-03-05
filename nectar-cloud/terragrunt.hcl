@@ -35,7 +35,7 @@ remote_state {
   # disable_dependency_optimization = true
 
   config = {
-    path = "${get_path_to_repo_root()}/${local.env_vars.locals.stack}-state/terraform.tfstate"
+    path = "${get_path_to_repo_root()}/${local.env_vars.locals.stack}-state/${path_relative_to_include()}/terraform.tfstate"
   }
 }
 
@@ -45,7 +45,7 @@ remote_state {
 # -- File path
 locals {
   # -- File path
-  env_path = fileexists("${get_parent_terragrunt_dir()}/envs/envs.hcl") ? "${get_parent_terragrunt_dir()}/envs/envs.hcl" : ""
+  env_path    = fileexists("${get_parent_terragrunt_dir()}/envs/envs.hcl") ? "${get_parent_terragrunt_dir()}/envs/envs.hcl" : ""
   secret_path = fileexists("${get_parent_terragrunt_dir()}/secrets/secrets.yaml") ? "${get_parent_terragrunt_dir()}/secrets/secrets.yaml" : ""
 
   # -- Automatically load env variables
@@ -83,7 +83,7 @@ generate "versions" {
         }
         helm = {
           source = "hashicorp/helm"
-          version = "2.9.0"
+          version = "2.11.0"
         }
       }
     }

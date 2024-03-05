@@ -6,6 +6,7 @@
 .terraform
 *terraform.tfstate*
 *terraform.tfstate.backup*
+.terragrunt-cache/*
 .terraform/*
 terraform.tfstate
 *.terragrunt*

@@ -1,7 +1,7 @@
 locals {
-  backend = "local"
-  context = "uq_thesis_potter"
-
+  backend     = "local"
+  context     = "uq_thesis_potter"
+  environment = "uq_thesis_env"
   #-------------------------------------------------
   # Stack vars
   #-------------------------------------------------
@@ -31,6 +31,7 @@ locals {
   k8s_addons_component = "k8s-cluster-addons"
   k8s_addons = {
     argocd = {
+      domain_name = "https://cd.pinnamon.com"
       chart_version = "5.49.0"
       node_selector = {
         nodegroup-role = "main"

@@ -1,6 +1,6 @@
 locals {
   backend     = "local"
-  context     = "uq_thesis_potter"
+  context     = "potter_gha_2"
   environment = "uq_thesis_env"
   #-------------------------------------------------
   # Stack vars
@@ -20,7 +20,7 @@ locals {
     runner_node = {
       api_version = "v1"
       kind        = "Node"
-      name        = "potter-github-action-runner-gpwudckxl5im-node-0"
+      name        = "potter2-t5zufwlcx667-node-0"
     }
   }
 

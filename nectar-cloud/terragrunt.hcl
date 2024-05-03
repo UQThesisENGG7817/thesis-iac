@@ -65,7 +65,7 @@ generate "providers" {
     }
 
     provider "kubernetes" {
-       config_path    = "../${get_path_to_repo_root()}config-thesis"
+       config_path = "~/.kube/config"
        config_context = "${local.env_vars.locals.context}"
     }
   EOF
